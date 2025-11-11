@@ -1,0 +1,14 @@
+# Env & secrets
+.env
+
+# macOS
+.DS_Store
+
+# Backups
+n8n_data_*.tar.gz
+
+# Editors/IDE
+.idea/
+.vscode/
+
+
