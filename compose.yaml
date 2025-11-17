@@ -7,6 +7,10 @@ services:
     labels:
       - traefik.enable=false
     environment:
+      - N8N_PROXY_HOPS=1
+      - DB_SQLITE_POOL_SIZE=5
+      - N8N_BLOCK_ENV_ACCESS_IN_NODE=true
+      - N8N_GIT_NODE_DISABLE_BARE_REPOS=true
       - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
       - N8N_HOST=${SUBDOMAIN}.${DOMAIN_NAME}
       - N8N_PORT=5678
