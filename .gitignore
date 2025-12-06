@@ -5,6 +5,7 @@
 .DS_Store
 
 # Backups
+backups/
 n8n_data_*.tar.gz
 
 # Editors/IDE

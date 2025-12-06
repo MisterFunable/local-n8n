@@ -24,5 +24,19 @@ services:
       - n8n_data:/home/node/.n8n
       - ./local-files:/files
 
+  ngrok:
+    image: ngrok/ngrok:latest
+    restart: always
+    command:
+      - "http"
+      - "http://n8n:5678"
+      - "--domain=${SUBDOMAIN}.${DOMAIN_NAME}"
+    environment:
+      NGROK_AUTHTOKEN: ${NGROK_AUTHTOKEN}
+    ports:
+      - 4040:4040
+    depends_on:
+      - n8n
+
 volumes:
   n8n_data:
