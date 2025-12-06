@@ -30,7 +30,6 @@ services:
     command:
       - "http"
       - "http://n8n:5678"
-      - "--domain=${SUBDOMAIN}.${DOMAIN_NAME}"
     environment:
       NGROK_AUTHTOKEN: ${NGROK_AUTHTOKEN}
     ports:
